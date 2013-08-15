@@ -11,14 +11,14 @@ gem 'bootstrap-will_paginate', '0.0.9'
 group :development, :test do
   gem 'pg', '0.15.1'
   gem 'rspec-rails', '2.13.1'
-  # The following optional lines are part of the advanced setup.
+  gem 'spin'
+  gem 'guard-spin'
+  gem 'capybara', '2.1.0'
   gem 'guard-rspec', '2.5.0'
-  gem 'spork-rails', github: 'sporkrb/spork-rails'
-  gem 'guard-spork', '1.5.0'
-  gem 'childprocess', '0.3.6'
 end
 
 group :test do
+  gem 'pg', '0.15.1'
   gem 'selenium-webdriver', '2.0.0'
   gem 'capybara', '2.1.0'
   gem 'factory_girl_rails', '4.2.0'
