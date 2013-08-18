@@ -10,11 +10,13 @@ gem 'bootstrap-will_paginate', '0.0.9'
 
 group :development, :test do
   gem 'pg', '0.15.1'
-  gem 'rspec-rails', '2.13.1'
-  gem 'spin'
-  gem 'guard-spin'
+  gem 'rspec-rails', '2.14.0'
+  gem "spin", :github => "rickyrobinson/spin", :branch => "cucumber"
+  gem "guard", ">= 0.6.2"
+  gem "guard-spin", :github => "rickyrobinson/guard-spin", :branch => "cucumber"
+  gem "guard-spin_rspec", :github => "rickyrobinson/guard-spin_rspec"
+  gem "guard-spin_cucumber", :github => "rickyrobinson/guard-spin_cucumber"
   gem 'capybara', '2.1.0'
-  gem 'guard-rspec', '2.5.0'
 end
 
 group :test do
@@ -23,6 +25,11 @@ group :test do
   gem 'capybara', '2.1.0'
   gem 'factory_girl_rails', '4.2.0'
   gem 'cucumber-rails', '1.3.0', :require => false
+  gem "spin", :github => "rickyrobinson/spin", :branch => "cucumber"
+  gem "guard", ">= 0.6.2"
+  gem "guard-spin", :github => "rickyrobinson/guard-spin", :branch => "cucumber"
+  gem "guard-spin_rspec", :github => "rickyrobinson/guard-spin_rspec"
+  gem "guard-spin_cucumber", :github => "rickyrobinson/guard-spin_cucumber"
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
 
   # Uncomment this line on OS X.
