@@ -110,4 +110,9 @@ describe "Authentication", type: :request do
       end
     end
   end
+  describe "when user is not signed in" do
+    let(:user) { FactoryGirl.create(:user) }
+    it { should_not have_link('Profile',     href: user_path(user)) }
+    it { should_not have_link('Settings',    href: edit_user_path(user)) }
+  end
 end
